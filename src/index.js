@@ -16,7 +16,8 @@ function searchCountries(e) {
   if (getCountry) {
     fetchCountries(getCountry)
       .then(data => {
-        renderCountries(data)
+        renderCountries(data) 
+        // ssad
       })
       .catch(error => {
         Notify.failure('there is no such country');
