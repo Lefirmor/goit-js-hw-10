@@ -15,7 +15,7 @@ export default function renderCountries(dataCountries) {
      dataCountries.map(country =>{
         countries += `
             <li>
-                <img src = "${country.flags.svg}" class = "flag" width = 30/>
+                <img src = "${country.flags.svg}" class = "flag" width = "30"/>
                 <span class = "country-name">${country.name}</span>
             </li>
         `
@@ -33,8 +33,8 @@ export default function renderCountries(dataCountries) {
 
     countryInfoRef.innerHTML = `
         
-        <div class = "country-header"
-            <img src = "${country.flags.svg}" class = "flag" width = 30/>
+        <div class = "country-header""
+            <img src = "${country.flags.svg}" class = "flag" width = "30"/>
             <h2 class = "title">${country.name}</h2>
         </div>
 
