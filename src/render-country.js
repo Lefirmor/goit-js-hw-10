@@ -9,6 +9,10 @@ export default function renderCountries(dataCountries) {
   let quantityOfCountries = dataCountries.length;
   if (quantityOfCountries > 10) {
     Notify.info('Too many matches found. Please enter a more specific name.');
+    countryListRef.innerHTML = '';
+    countryInfoRef.innerHTML = "";
+
+
   } else if (quantityOfCountries > 2 && quantityOfCountries <= 10) {
     dataCountries.map(country => {
       countries += `
@@ -18,8 +22,13 @@ export default function renderCountries(dataCountries) {
             </li>
         `;
       countryListRef.innerHTML = countries;
+      countryInfoRef.innerHTML = "";
+
     });
-  } else {
+    
+
+  } 
+  else {
     let country = dataCountries[0];
     let languages = [];
 
@@ -54,5 +63,7 @@ export default function renderCountries(dataCountries) {
         </ul>
     `;
     countryListRef.innerHTML = '';
+    
+    
   }
 }

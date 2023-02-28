@@ -21,6 +21,8 @@ function searchCountries(e) {
       })
       .catch(error => {
         Notify.failure('there is no such country');
+        countryListRef.innerHTML = ''
+        countryInfoRef.innerHTML = "";
       });
     
   }
